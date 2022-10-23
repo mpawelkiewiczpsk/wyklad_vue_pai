@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <div class="schedule">
+        <table>
+            <tr>
+                <th>Godziny zajęć</th>
+            </tr>
+            <tr v-for="(item, index) in lessonsStart">
+                <td>
+                    {{ item }} - {{ lessonsEnd[index] }}
+                </td>
+            </tr>
+        </table>
+        <table class="schedule__day" v-for="(value, key) in schedule">
+            <tr>
+                <th>{{ key }}</th>
+            </tr>
+            <tr v-for="i in value.startsAt">
+                <td>- - -</td>
+            </tr>
+            <tr v-for="lesson in value.lessons">
+                <td>{{ lesson }}</td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

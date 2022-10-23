@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <button class="btn" @click="hp-=10">Odejmij HP</button>
+
+    <div class="progressbar">
+
+        <div class="progressbar__bar" :style="{ width: hp + '%', backgroundColor: barColor }">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
